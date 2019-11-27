@@ -10,6 +10,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  navigate: Elemento[] = [{ titulo: 'home', enlace: '/home', icon: 'boat' }
+    , { titulo: 'contactos', enlace: '/contactos', icon: 'contacts' },
+  { titulo: 'chat', enlace: '/chat', icon: 'flask' }];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -24,4 +27,9 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+}
+export interface Elemento {
+  titulo: string;
+  enlace: string;
+  icon: string;
 }

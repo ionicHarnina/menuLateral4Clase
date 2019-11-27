@@ -3,7 +3,7 @@
   navegacion es controlada por el router -->
   <ion-router-outlet id="content1"></ion-router-outlet>
   <!-- El menu flota por toda la aplicacion y se usa como navegador por eso esta aqui -->
-  <ion-menu slot="start" contentId="content1" type="overlay">
+  <ion-menu slot="start" contentId="content1">
     <!-- El menu cuenta con cabecera y cuerpo -->
     <ion-header>
       <ion-toolbar>
@@ -11,12 +11,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-menu-toggle *ngFor="let item of navigate" auto-hide="true">
-        <ion-item [routerLink]="item.enlace" routerDirection="root">
-          <ion-icon [name]="item.icon" slot="start"></ion-icon>
-          <ion-label>{{item.titulo}}</ion-label>
-        </ion-item>
-      </ion-menu-toggle>
+      <ion-item>Nuevo</ion-item>
     </ion-content>
   </ion-menu>
 </ion-app>
